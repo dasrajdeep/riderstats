@@ -1,0 +1,17 @@
+extends layout
+
+block includes
+  script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+  script(src='/javascripts/main.js')
+  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+
+block content
+  div.container
+    h1=title
+    - if(strava.accessToken === undefined)
+      button(type='button').btn.btn-primary#login-btn Login
+    - else
+      div.col-md-6
+        
+      div.col-md-6
